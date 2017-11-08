@@ -1,0 +1,6 @@
+---
+- hosts: all 
+  gather_facts: no
+  tasks:
+  - name: Gibt das entsprechene Logfile aus
+    shell: tail -n {{ zeilen }} /var/log/{{ logfile }}
